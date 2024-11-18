@@ -1,0 +1,75 @@
+.sound-card {
+    display: flex;
+    position: relative;
+    height: auto;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    border-radius: 60px;
+    color: #E6E4D6;
+    text-align: start;
+    /* background: radial-gradient(#414A1E 24%, #596A23 58%, #667023 65%, #6E7824 90% ); */
+    opacity: 0.9;
+    z-index: 0;
+    box-sizing: border-box; 
+}
+
+.sound-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: rgba(238, 231, 159, 0.2);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.sound-card-content-container {
+    padding: 3rem 2rem 2rem;
+    overflow: hidden;
+}
+
+.sound-card-descriptor {
+    margin-bottom: 3rem;
+}
+
+ul {
+    padding: 0 0 0 20px;
+}
+
+li {
+    font-size: 3.4vw;
+}
+
+.sound-card-list-container {
+    z-index: 2;
+}
+
+.sound-card-button-container {
+    display: flex;
+    justify-content: end;
+}
+
+@media (min-width: 1024px) {
+    li {
+        font-size: 1.2rem;
+    }
+
+    .sound-card {
+        width: 100%;
+        height: auto;
+        min-height: 60vh;
+        padding: 3rem 0 0 2rem;
+        overflow: auto; 
+    }
+
+    .sound-card-content-container {
+        width: 100%;
+    }
+
+    .sound-card-button-container {
+        align-self: end;
+    }
+}

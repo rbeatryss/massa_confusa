@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+.App {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background: linear-gradient(180deg, #0A0000 0%, #271B00 8%, #312509 46%, #3B2E12 67%, #504610 100%);
+}
+
+.header {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 19vw;
+  font-weight: 700;
+  color: #E6E4D6;
+  text-align: start;
+  margin: 0;
+  line-height: 0.8;
+  text-align: left;
+  letter-spacing: -3px;
+  word-wrap: break-word;
+
+}
+
+h2 {
+  font-size: 11vw;
+  font-weight: 400;
+  color: #E6E4D6;
+  text-align: start;
+  letter-spacing: -2px;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 3.9vw;
+  font-weight: 400;
+  color: #E6E4D6;
+}
+
+p {
+  font-size: 3.6vw;
+  color: #E6E4D6;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.explore,
+.sounds,
+.community,
+.about,
+/* .text, */
+.closing,
+.events {
+  margin: 8rem 1.2rem;
+}
+
+.about {
+  margin: auto 1.2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 71vh; */
+}
+
+.about-description {
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+  /* distance between massa and descrip */
+  margin-bottom: 20rem;
+  white-space: normal;
+}
+
+.events-title,
+.sounds-title,
+.community-title,
+.magic-title,
+.sounds-title,
+.quote {
+  margin: 1rem 2.5rem 2rem;
+  word-wrap: break-word;
+}
+
+.magic-title {
+  line-height: 100%;
+}
+
+.magic-description {
+  text-align: justify;
+  font-weight: 400;
+  line-height: 120%;
+  margin: auto 1.2rem;
+}
+
+.events-horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  /* padding-right: 30px; */
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+}
+
+.events-horizontal-scroll::-webkit-scrollbar {
+  display: none;
+  cursor: grab;
+}
+
+.text {
+  width:100%;
+  margin: 8rem 0;
+}
+
+.text-animation-video {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-animation-desktop {
+  display: none;
+}
+
+.text-animation {
+  /* margin-right: 1rem; */
+  width:100%
+}
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.closing img {
+  width: 6rem;
+  height: auto;
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 65%;
+}
+
+.quote-desktop {
+  display: none;
+}
+
+footer {
+  position: relative;
+  color: #fff;
+  padding: 2rem 1.2rem 3rem;
+}
+
+.footer-title {
+  margin-bottom: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.date {
+  align-self: flex-end;
+}
+
+.bttn-container {
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(238, 231, 159, 0.1);
+  cursor: pointer;
+  border-radius: 20px;
+  color: #E6E4D6;
+  border: 1px solid #8d8c81;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.action-btn:active {
+  background-color: rgba(238, 231, 159, 0.3);
+}
+
+.action-btn:hover {
+  background-color: rgba(238, 231, 159, 0.2);
+}
+
+@media (min-width: 500px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 11.5vw;
+    margin-bottom: 8%;
+    cursor:default;
+  }
+
+
+  h2 {
+    font-size: 3.3rem;
+    cursor:default;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    cursor:default;
+  }
+
+  p {
+    font-size: 1.2rem;
+    cursor:default;
+  }
+
+  .events-title,
+  .sounds-title,
+  .community-title,
+  .magic-title,
+  .sounds-title,
+  .quote {
+    margin: 1rem 2.5rem 4rem;
+    word-wrap: break-word;
+  }
+
+  .about {
+    height: 100vh;
+  }
+
+  .about-description-desktop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-description-desktop-one{
+    text-align: justify; /* This ensures the text spreads evenly */
+    width: 100%; /* Ensure the element takes up the full available width */
+    margin: 0; /* Remove any default margin that could limit the width */
+    padding: 0; /* Remove any padding that could affect alignment */
+    white-space: normal; /* Ensure text wraps normally */
+    font-size: 1.5rem;
+  }
+  
+  .about-description-desktop-two {
+    text-align: left; /* This will let the text in the second paragraph remain natural */
+    width: auto; /* Adjust width to content */
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .about-description h3 {
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 5rem auto;
+    font-size: 1rem;
+    white-space: pre-wrap;
+  }
+
+  .magic {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .magic-title {
+    text-align: center;
+    line-height: 100%;
+    font-size: 4rem;
+  }
+
+  .magic-description {
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 2rem;
+    margin: 0 14rem;
+  }
+
+  .events-horizontal-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+  }
+
+  .text-animation-desktop {
+    display: flex;
+    width: 95%;
+    margin-left: 4rem;
+  }
+
+  .text-animation {
+    display: none;
+  }
+
+  /* .text-animation-video {
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} */
+
+.text {
+  width:100%;
+  margin: 8rem 1.2rem;
+}
+
+  .quote {
+    display: none;
+  }
+
+  .quote-desktop {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  footer {
+    position: relative;
+    color: #fff;
+    padding: 2rem 1.2rem 3rem;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-title {
+    font-size: 3rem;
+    flex: 1;
+    text-align: left;
+    letter-spacing: -3px;
+    margin: 0;
+  }
+
+  .footer-date {
+    flex: 1;
+    text-align: center;
+  }
+
+  .btn-container {
+    margin-bottom: -0.5rem;
+  }
+}

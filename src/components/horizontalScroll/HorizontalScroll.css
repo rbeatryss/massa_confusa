@@ -1,0 +1,49 @@
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding-right: 30px;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  padding: 4rem 1.3rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+  cursor: grab;
+}
+
+.slider-dots {
+  margin: -2.5rem 0 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border: 1px solid #8d8c81;
+  border-radius: 50%;
+  background-color: none;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #E6E4D6;
+}
+
+
+@media (min-width: 1024px) {
+  .horizontal-scroll {
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .slider-dots {
+    display: none;
+  }
+}

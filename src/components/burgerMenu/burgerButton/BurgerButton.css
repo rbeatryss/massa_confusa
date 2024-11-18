@@ -1,0 +1,15 @@
+.burger-btn {
+    position: fixed;
+    z-index: 3;
+    align-self: flex-end;
+    padding: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger-btn img {
+    width: 40px; 
+    height: 40px;
+  }
+  

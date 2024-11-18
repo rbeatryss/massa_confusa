@@ -1,0 +1,110 @@
+.intro-book-card {
+    display: flex;
+    position: relative;
+    width: 90vw;
+    /* size of the bookcard */
+    height: auto;
+    min-height: 78vh;
+    flex: 0 0 auto;
+    margin: 0 1.2rem;
+    flex-direction: column;
+    border-radius: 60px;
+    color: rgb(254, 254, 254);
+    background: url('../../../assets/exploreBackground.png');
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.intro-book-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 60px;
+    z-index: 1;
+}
+
+.intro-book-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-book-card-title {
+    letter-spacing: -3px;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.intro-book-card-paragraph-desktop-container {
+    display: none;
+}
+
+.intro-book-card-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 6.3rem;
+}
+
+.intro-book-card-paragraph-one,
+.intro-book-card-paragraph-two {
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-align: justify;
+    color: #CAC5B1;
+    text-justify: inter-word;
+}
+
+@media (min-width: 1024px) {
+    .intro-book-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        flex: 0 1 auto;
+        min-height: 57vh;
+        margin: 0 auto;
+        padding: 1rem 2rem 3rem;
+        overflow: visible;
+    }
+
+    .intro-book-card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .intro-book-card-paragraph {
+        display: none;
+    }
+
+    .intro-book-card-paragraph-desktop-container {
+        display: flex;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .intro-book-card-paragraph-desktop {
+        margin: 0;
+        font-size: 1.5vw;
+        text-align: left;
+        word-spacing: 10px;
+        /* width: 50%; */
+    }
+}

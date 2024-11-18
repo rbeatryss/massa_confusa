@@ -1,0 +1,86 @@
+.event-card {
+    display: flex;
+    position: relative;
+    width: 90vw;
+    height: auto;
+    flex: 0 0 auto;
+    margin: 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px;
+    color: rgb(254, 254, 254);
+    scroll-snap-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.event-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.event-card-content-container,
+.event-card-button-container {
+    position: relative;
+    z-index: 2;
+}
+
+.event-card-content-container {
+    text-align: left;
+    font-size: 3vw;
+    padding: 1.5rem 2rem 2rem 3rem;
+}
+
+p {
+    margin: 0;
+}
+
+.event-card-title-name,
+.event-card-date-time,
+.event-card-address,
+.event-card-description {
+    margin-bottom: 2em;
+}
+
+.event-card-title-name {
+    margin-top: 2em;
+}
+
+.event-card-button-container {
+    display: flex;
+    justify-content: end;
+}
+
+@media (min-width: 1024px) {
+    .event-card {
+        /* events card size */
+        min-width: 32%;
+        /* min-height: 50vh; */
+        height: auto;
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .event-card-content-container {
+        margin: 5rem 2rem auto;
+    }
+
+    .event-card-button-container {
+        margin: 1rem -1rem;
+    }
+
+    .event-card-title-name,
+    .event-card-date-time,
+    .event-card-address,
+    .event-card-description {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
