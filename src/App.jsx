@@ -21,6 +21,9 @@ import textAnimation from "./assets/text-animation.svg"
 import logoWhite from "./assets/logoWhite.svg"
 import email from './assets/mail.svg'
 import instagram from './assets/instagram.svg'
+import aboutText from './assets/about-description.svg'
+import aboutTextDesktop from './assets/about-description-text-desktop.svg'
+import magicDescription from './assets/magic-description.svg'
 import textAnimationVideoMobile from "./assets/mob-animation.gif";
 import textAnimationVideoDesktop from "./assets/desktop-animation.gif";
 
@@ -191,12 +194,14 @@ function App() {
       </header>
       <div className="about">
         <div className="about-description">
-          <h3>MASSA           CONFUSA            IS         A           LOS          ANGELES         BASED        CREATIVE          LABORATORY          EXPLORING         THE        SUBTLE          ART          OF<br />TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
+        <img src={aboutText} alt="description" />
+          {/* <h3>MASSA CONFUSA IS A LOS ANGELES BASED<br />CREATIVE LABORATORY EXPLORING THE SUBTLE<br />ART OF TRANSFORMATION. HERE, CREATIVE<br />CHAOS ISN'T SOMETHING TO CONTROL—IT'S A<br />CATALYST FOR DISCOVERY.</h3> */}
         </div>
-        {/* <div className="about-description-desktop">
-          <h3 className="about-description-desktop-one">MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF </h3>
-          <h3 className="about-description-desktop-two">TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</h3>
-        </div> */}
+        <div className="about-description-desktop">
+          <img src={aboutTextDesktop} alt="description" />
+          {/* <p className="about-description-desktop-one">MASSA CONFUSA IS A LOS ANGELES BASED CREATIVE LABORATORY EXPLORING THE SUBTLE ART OF </p>
+          <p className="about-description-desktop-two">TRANSFORMATION. HERE, CREATIVE CHAOS ISN'T SOMETHING TO CONTROL—IT'S A CATALYST FOR DISCOVERY.</p> */}
+        </div>
         <div className="about-title">
           <h1>MASSA CONFUSA</h1>
         </div>
@@ -220,16 +225,14 @@ function App() {
         </HorizontalScroll>
       </div>
       <div className="magic">
-        <h2 className="magic-title">Magic <br /> Rediscovered.</h2>
+        <h2 className="magic-title">Magic <br />Rediscovered.</h2>
+        <img src={magicDescription} alt="description" className="magic-description-image"/>
         {/* <h3 className="magic-description">
-          WE BELIEVE THAT MAGIC IS NEVER FAR—<br></br>SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO<br></br>RISE BACK TO THE SURFACE. WHETHER YOU’RE<br></br>SEEKING PERSONAL TRANSFORMATION,<br></br>A BURST OF CREATIVE ENERGY,<br></br>OR ANSWERS TO DEEPER QUESTIONS, OUR<br></br>CREATIVE LAB IS WHERE THAT SOMETHING IS<br></br>WAITING TO BE KNOWN.
+          WE BELIEVE THAT MAGIC IS NEVER FAR—<br />SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO<br />RISE BACK TO THE SURFACE. WHETHER YOU’RE<br />SEEKING PERSONAL TRANSFORMATION,<br />A BURST OF CREATIVE ENERGY,<br />OR ANSWERS TO DEEPER QUESTIONS, OUR<br />CREATIVE LAB IS WHERE THAT SOMETHING IS<br />WAITING TO BE KNOWN.
         </h3> */}
-        <h3 className="magic-description">
-          WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
+        <h3 className="magic-description-desktop">
+          WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS<br />A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE<br />SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE<br />ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB<br />IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
         </h3>
-        {/* <h3 className="magic-description-desktop">
-          WE BELIEVE THAT MAGIC IS NEVER FAR—SOMETIMES, IT JUST NEEDS A GENTLE NUDGE TO RISE BACK TO THE SURFACE. WHETHER YOU’RE SEEKING PERSONAL TRANSFORMATION, A BURST OF CREATIVE ENERGY, OR ANSWERS TO DEEPER QUESTIONS, OUR CREATIVE LAB IS WHERE THAT SOMETHING IS WAITING TO BE KNOWN.
-        </h3> */}
       </div>
       <div ref={eventsRef} className="events">
         <h2 className='events-title'>Events</h2>
@@ -267,7 +270,7 @@ function App() {
           />
         ))}
       </div>
-     {/* <div className="text-animation">
+      {/* <div className="text-animation">
           <video
             src={textAnimationVideoMobile}
             autoPlay

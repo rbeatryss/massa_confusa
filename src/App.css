@@ -20,7 +20,6 @@ h1 {
   font-size: 19vw;
   font-weight: 700;
   color: #E6E4D6;
-  text-align: start;
   margin: 0;
   line-height: 0.8;
   text-align: left;
@@ -72,17 +71,36 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 71vh; */
+  height: 71vh;
+}
+
+.about-description-desktop {
+  display: none;
 }
 
 .about-description {
-  font-weight: 400;
-  text-align: justify;
-  text-justify: inter-word;
-  /* distance between massa and descrip */
-  margin-bottom: 20rem;
-  white-space: normal;
+  max-width: 100%;
+  text-align: center;
+  padding-top: 2rem;
 }
+
+
+/* .about-description {
+  font-weight: 400;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  margin: 0 0 20rem;
+  white-space: normal;
+  max-width: 100%;
+} */
+
+/* .about-description h3 {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  word-spacing: -0.1em;
+  hyphens: auto;
+} */
 
 .events-title,
 .sounds-title,
@@ -98,11 +116,24 @@ p {
   line-height: 100%;
 }
 
+.magic-description-desktop {
+  display: none;
+}
+
+.magic-description-image{
+max-width: 100%;
+margin: auto 1.5rem;
+}
+
 .magic-description {
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-weight: 400;
   line-height: 120%;
-  margin: auto 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #CAC5B1;
 }
 
 .events-horizontal-scroll {
@@ -120,13 +151,14 @@ p {
 }
 
 .text {
-  width:100%;
+  width: 100%;
   margin: 8rem 0;
 }
 
 .text-animation-video {
   width: 100%;
-  max-width: 600px; /* Adjust as needed */
+  max-width: 600px;
+  /* Adjust as needed */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -138,7 +170,7 @@ p {
 
 .text-animation {
   /* margin-right: 1rem; */
-  width:100%
+  width: 100%
 }
 
 .closing {
@@ -235,23 +267,23 @@ footer {
   h1 {
     font-size: 11.5vw;
     margin-bottom: 8%;
-    cursor:default;
+    cursor: default;
   }
 
 
   h2 {
     font-size: 3.3rem;
-    cursor:default;
+    cursor: default;
   }
 
   h3 {
     font-size: 1.5rem;
-    cursor:default;
+    cursor: default;
   }
 
   p {
     font-size: 1.2rem;
-    cursor:default;
+    cursor: default;
   }
 
   .events-title,
@@ -268,36 +300,55 @@ footer {
     height: 100vh;
   }
 
-  .about-description-desktop {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .about-description-desktop-one{
-    text-align: justify; /* This ensures the text spreads evenly */
-    width: 100%; /* Ensure the element takes up the full available width */
-    margin: 0; /* Remove any default margin that could limit the width */
-    padding: 0; /* Remove any padding that could affect alignment */
-    white-space: normal; /* Ensure text wraps normally */
-    font-size: 1.5rem;
-  }
-  
-  .about-description-desktop-two {
-    text-align: left; /* This will let the text in the second paragraph remain natural */
-    width: auto; /* Adjust width to content */
-    margin: 0;
-    font-size: 1.5rem;
+  .about-description {
+    display: none;
   }
 
-  .about-description h3 {
+  .about-description-desktop {
+    max-width: 100%;
+    display: block;
+    padding: 10rem 0;
+  }
+
+  .about-description-desktop img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+
+  /* .about-description-desktop {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .about-description-desktop-one {
+    display: block;
+    text-align: justify;
+    margin-bottom: 1rem;
+    width: 100%;
+    color: #CAC5B1;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+
+  .about-description-desktop-two {
+    display: block;
+    text-align: left;
+    color: #CAC5B1;
+  } */
+
+  /* .about-description h3 {
     font-weight: 400;
     text-align: justify;
     text-justify: inter-word;
     margin: 5rem auto;
     font-size: 1rem;
     white-space: pre-wrap;
-  }
+  } */
 
   .magic {
     height: 100vh;
@@ -314,11 +365,18 @@ footer {
     font-size: 4rem;
   }
 
-  .magic-description {
+  .magic-description, 
+  .magic-description-image {
+    display: none;
+  }
+
+  .magic-description-desktop {
+    display: block;
+    white-space: pre-line;
+    line-height: 1.5;
     text-align: center;
     word-spacing: 5px;
     font-size: 2rem;
-    margin: 0 14rem;
   }
 
   .events-horizontal-scroll {
@@ -348,10 +406,10 @@ footer {
   margin: 0 auto;
 } */
 
-.text {
-  width:100%;
-  margin: 8rem 1.2rem;
-}
+  .text {
+    width: 100%;
+    margin: 8rem 1.2rem;
+  }
 
   .quote {
     display: none;
